@@ -1,15 +1,39 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using System;
 
 public class ComplexDig
 {
-    public Complex dig1 = new Complex(0,0);
-    public Complex dig2 = new Complex(0,0);
-    public int n = 0;
+    public Complex dig;
+    ComplexDig()
+    {
+        this.dig = new Complex(0, 0); 
+    }
 
-    struct Trig
+    *//*ComplexDig(string name)
+    {
+        this.dig = new Complex(0, 0);
+        switch (name)
+        {
+            case == "alg":
+                this.Alg(this.dig.)
+        }
+    }
+
+    public struct Alg
+    {
+        public double real;
+        public double imaginary;
+
+        public Alg(double r, double i)
+        {
+            real = r;
+            imaginary = i;
+        }
+    }
+
+    public struct Trig
     {
         public double magnitude;
         public double phase;
@@ -21,7 +45,8 @@ public class ComplexDig
         }
     }
 
-    struct Exp
+    public 
+        struct Exp
     {
         public double magnitude;
         public double phase;
@@ -31,64 +56,59 @@ public class ComplexDig
             magnitude = m;
             phase = p;
         }
-    }
+    }*//*
 
-    void ChangeDig1R(double dig1r)
+    //changing
+    public void ChangeDigR(double digr)
     {
-        dig1 = new Complex(dig1r, dig1.Imaginary); 
+        dig = new Complex(digr, dig.Imaginary); 
     }
 
-    void ChangeDig1I(double dig1i)
+    public void ChangeDigI(double digi)
     {
-        dig1 = new Complex(dig1.Real, dig1i);
+        dig = new Complex(dig.Real, digi);
     }
 
-    void ChangeDig2R(double dig2r)
-    {
-        dig2 = new Complex(dig2r, dig2.Imaginary);
-    }
 
-    void ChangeDig2I(double dig2i)
-    {
-        dig2 = new Complex(dig2.Real, dig2i);
-    }
-
-    Trig TrigForm(Complex dig)
+    //form
+    public Trig TrigForm(Complex dig)
     {
         return new Trig(dig.Magnitude, dig.Phase * 180 / Math.PI);
     }
 
-    Exp ExpForm(Complex dig)
+    public Exp ExpForm(Complex dig)
     {
         return new Exp(dig.Magnitude, dig.Phase * 180 / Math.PI);
     }
+    
 
-    Complex Sum()
+    //operation
+    public Complex Sum(ComplexDig dig2)
     {
-        return Complex.Add(dig1, dig2);
-    }
-
-    Complex Difference()
-    {
-        Complex t = Complex.Multiply(dig2, -1.0);
-        return Complex.Add(dig1, t);
-    }
-    Complex Multiply()
-    {
-        return Complex.Multiply(dig1, dig2);
-    }
-    Complex Divide()
-    {
-        return Complex.Divide(dig1, dig2);
-    }
-    Complex Exponentation()
-    {
-        return Complex.Pow(dig1, n); ;
+        return Complex.Add(this.dig, dig2.dig);
     }
 
-    //?????
-    Complex RootOfIntDegree()
+    public Complex Difference(ComplexDig dig2)
     {
-        return Complex.Add(dig1, dig2);
+        Complex t = Complex.Multiply(dig2.dig, -1.0);
+        return Complex.Add(this.dig, t);
     }
-}
+    public Complex Multiply(ComplexDig dig2)
+    {
+        return Complex.Multiply(dig, dig2.dig);
+    }
+    public Complex Divide(ComplexDig dig2)
+    {
+        return Complex.Divide(dig, dig2.dig);
+    }
+    public Complex Exponentation(int n)
+    {
+        return Complex.Pow(dig, n); ;
+    }
+
+    *//*//?????
+    public Complex RootOfIntDegree()
+    {
+        return ; 
+    }*//*
+}*/
