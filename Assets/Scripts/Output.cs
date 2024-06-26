@@ -8,21 +8,10 @@ public class Output : MonoBehaviour
     public Operation digits;
     public Text output;
 
-    /*public Button add;
-    public Button mult;
-    public Button diff;
-    public Button div;
-    public Button ate;
-    public Button tae;
-    public Button eat;
-    public Button exp;
-    public Button roots;*/
-
     public void Add()
     {
         Ans ans = digits.Add();
-        //Debug.Log(ans.first);
-        //Debug.Log(ans.second);
+
         output.text = "= " + ans.first + " + (" + ans.second + ")i";
     }
 
